@@ -1,0 +1,32 @@
+@startuml
+
+class Heroe {
+    - id: int
+    - nombre: String
+    - mision: String
+    - peligrosidad: int
+    - pago: double
+    - aporte: double
+    - impuestos: double
+    + getters/setters
+    + toString(): String
+}
+
+class Avengers {
+    - lista: List<Heroe>
+    + agregardatos(Heroe): void
+    + modificardatos(...): void
+    + imprimir(): String
+    + generarInformePorId(id): String
+}
+
+class Ventana {
+    - Principal: JPanel
+    - campos y botones GUI
+    + main()
+}
+
+Ventana --> Avengers
+Avengers --> Heroe
+
+@enduml
